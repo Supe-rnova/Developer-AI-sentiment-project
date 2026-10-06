@@ -1,0 +1,10 @@
+# Raw data stays on each person's machine (download from Kaggle, see README)
+data/raw/
+
+# Python / Jupyter noise
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+.venv/
+venv/
+.DS_Store

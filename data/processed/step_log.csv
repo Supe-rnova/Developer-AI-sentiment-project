@@ -1,0 +1,9 @@
+stage,step,rows,columns
+0 raw,loaded raw file,65437,44
+1 cleaning,removed duplicates,65437,44
+1 cleaning,dropped rows with missing/invalid target,45873,44
+1 cleaning,range/type/consistency fixes (no rows dropped),45873,44
+2 manipulation,filtered to current AI users,37536,44
+2 manipulation,selected columns + grouped countries + label,37536,11
+3 preprocessing,train rows,30028,37
+3 preprocessing,test rows,7508,37
