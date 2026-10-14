@@ -1,0 +1,9 @@
+dropped,why
+years_professional_coding_num,"|r| with y = 0.001, below the 0.1 cut"
+AI_Job_Integration_Comfort,"|r| with y = 0.008, below the 0.1 cut"
+AI_Tool_Count,"count replaced by its own flags (flags set 0.334 vs counts set 0.305 in 5-fold R2, gap at least 0.01)"
+AI_Benefit_Breadth,"count replaced by its own flags (flags set 0.334 vs counts set 0.305 in 5-fold R2, gap at least 0.01)"
+ben_other,"|r| with y = 0.092, below the 0.1 cut"
+tool_deployment_and_monitoring,"|r| with y = 0.078, below the 0.1 cut"
+tool_other,"|r| with y = 0.003, below the 0.1 cut"
+tool_predictive_analytics,"|r| with y = 0.067, below the 0.1 cut"
