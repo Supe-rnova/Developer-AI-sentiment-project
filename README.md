@@ -17,9 +17,8 @@ Group project: predict `AI_Sentiment_Score` (0-100, how favourably a developer v
 | File | Owner | Purpose |
 |---|---|---|
 | `01_data_prep.py` | data prep | raw CSV -> cleaned -> manipulated -> model-ready (**done**) |
-| feature selection (new file, e.g. `02_feature_selection.py`) | feature-selection teammate | correlation + heatmap on **train only** -> choose x |
+| visualization + feature-selection script (new) | visualization + feature selection | plots, then correlation + heatmap on **train only** -> choose x |
 | `03_modeling.py` | modeling | linear regression + random forest on the chosen x |
-| visualization script | visualization | plots (see rules below) |
 | `slides/` | presentation | the 5-minute deck |
 
 ## Which file should I use?
