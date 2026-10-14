@@ -1,0 +1,45 @@
+raw_column,name_in_model_data,role,reason
+respondent_id,respondent_id,id,"Row label only; kept in the readable files so rows can be traced, never a predictor."
+developer_type,,no_codebook,"Numeric codes; the Kaggle file ships no code book, so we cannot say what the codes mean. Removed rather than guess."
+age_range,,no_codebook,"Numeric codes; the Kaggle file ships no code book, so we cannot say what the codes mean. Removed rather than guess."
+education_level,,no_codebook,"Numeric codes; the Kaggle file ships no code book, so we cannot say what the codes mean. Removed rather than guess."
+country,country,candidate,top 10 + Other
+years_professional_coding,,duplicate,Identical to years_professional_coding_num in every row.
+organization_size,,no_codebook,"Numeric codes; the Kaggle file ships no code book, so we cannot say what the codes mean. Removed rather than guess."
+ai_tool_stance,,constant,"We filtered on it (=3), so it has a single value now."
+ai_overall_sentiment,,leakage,The raw survey answer AI_Sentiment_Score is built from (every raw code maps to one score). Using it would hand the model the answer.
+ai_accuracy_trust,,duplicate,Raw alphabetical codes of AI_Trust_Score (one-to-one). We keep the correctly ordered AI_Trust_Score.
+ai_complex_task_concern,ai_complex_task_concern,candidate,1 = very poor ... 5 = very well (recoded by us)
+ai_job_threat_concern,,duplicate,Raw alphabetical codes of AI_Job_Integration_Comfort (one-to-one). We keep the ordered version.
+AIBen - Greater efficiency,ben_greater_efficiency,candidate,0/1 flag (renamed to ben_greater_efficiency)
+AIBen - Improve accuracy in coding,ben_improve_accuracy_in_coding,candidate,0/1 flag (renamed to ben_improve_accuracy_in_coding)
+AIBen - Improve collaboration,ben_improve_collaboration,candidate,0/1 flag (renamed to ben_improve_collaboration)
+AIBen - Increase productivity,ben_increase_productivity,candidate,0/1 flag (renamed to ben_increase_productivity)
+AIBen - Make workload more manageable,ben_make_workload_more_manageable,candidate,0/1 flag (renamed to ben_make_workload_more_manageable)
+AIBen - Other (please specify):,ben_other,candidate,0/1 flag (renamed to ben_other)
+AIBen - Speed up learning,ben_speed_up_learning,candidate,0/1 flag (renamed to ben_speed_up_learning)
+AIToolCurrently Using - Committing and reviewing code,tool_committing_and_reviewing_code,candidate,0/1 flag (renamed to tool_committing_and_reviewing_code)
+AIToolCurrently Using - Debugging and getting help,tool_debugging_and_getting_help,candidate,0/1 flag (renamed to tool_debugging_and_getting_help)
+AIToolCurrently Using - Deployment and monitoring,tool_deployment_and_monitoring,candidate,0/1 flag (renamed to tool_deployment_and_monitoring)
+AIToolCurrently Using - Documenting code,tool_documenting_code,candidate,0/1 flag (renamed to tool_documenting_code)
+AIToolCurrently Using - Generating content or synthetic data,tool_generating_content_or_synthetic_data,candidate,0/1 flag (renamed to tool_generating_content_or_synthetic_data)
+AIToolCurrently Using - Learning about a codebase,tool_learning_about_a_codebase,candidate,0/1 flag (renamed to tool_learning_about_a_codebase)
+AIToolCurrently Using - Other (please specify):,tool_other,candidate,0/1 flag (renamed to tool_other)
+AIToolCurrently Using - Predictive analytics,tool_predictive_analytics,candidate,0/1 flag (renamed to tool_predictive_analytics)
+AIToolCurrently Using - Project planning,tool_project_planning,candidate,0/1 flag (renamed to tool_project_planning)
+AIToolCurrently Using - Search for answers,tool_search_for_answers,candidate,0/1 flag (renamed to tool_search_for_answers)
+AIToolCurrently Using - Testing code,tool_testing_code,candidate,0/1 flag (renamed to tool_testing_code)
+AIToolCurrently Using - Writing code,tool_writing_code,candidate,0/1 flag (renamed to tool_writing_code)
+years_professional_coding_num,years_professional_coding_num,candidate,"years, number"
+AI_Adoption_Level,,constant,Just a recode of ai_tool_stance -> single value after filtering.
+AI_Adoption_Score,,constant,Just a recode of ai_tool_stance -> single value after filtering.
+AI_Trust_Score,AI_Trust_Score,candidate,"0-100, ordered by the dataset author"
+AI_Sentiment_Score,AI_Sentiment_Score,target,y - what we predict.
+AI_Tool_Count,AI_Tool_Count,candidate,= sum of the 12 tool_* flags (redundant with them)
+AI_Benefit_Breadth,AI_Benefit_Breadth,candidate,= sum of the 7 ben_* flags (redundant with them)
+Dependency_Signal,,duplicate,Exactly 50 + AI_Trust_Score/2 (correlation 1.0 with AI_Trust_Score). Same information.
+AI_Job_Integration_Comfort,AI_Job_Integration_Comfort,candidate,10/50/100 = believes AI threatens job / unsure / does not (AI-opinion column; judgement call - see README)
+data_source,,metadata,Same value in every row.
+source_license,,metadata,Same value in every row.
+source_url,,metadata,Same value in every row.
+collection_year,,metadata,Same value in every row.

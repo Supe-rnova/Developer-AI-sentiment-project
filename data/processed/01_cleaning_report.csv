@@ -1,0 +1,15 @@
+stage,check,rows_or_values_affected,action
+1 cleaning,duplicate rows / repeated respondent_id,0,"dropped (none found - data arrived clean on this point, but we checked)"
+1 cleaning,target missing,19564,rows dropped
+1 cleaning,"target not in {0,25,50,75,100}",0,rows dropped (none found)
+1 cleaning,category columns stored as unlabeled numeric codes (4 columns),4,left as is here; removed in stage 2 (no code book)
+1 cleaning,TRUE/FALSE columns stored as bool,19,converted to 0/1 integers
+1 cleaning,ai_complex_task_concern codes in alphabetical (wrong) order,36999,recoded to 1=very poor ... 5=very well
+1 cleaning,AI_Trust_Score outside 0-100,0,set to missing (none found)
+1 cleaning,ai_complex_task_concern outside 1-5,0,set to missing (none found)
+1 cleaning,AI_Benefit_Breadth outside 0-7,0,set to missing (none found)
+1 cleaning,AI_Tool_Count outside 0-12,0,set to missing (none found)
+1 cleaning,years_professional_coding_num outside 0-60,0,set to missing (none found)
+1 cleaning,AI_Job_Integration_Comfort outside 0-100,0,set to missing (none found)
+1 cleaning,AI_Tool_Count disagrees with its TRUE/FALSE flags,0,none found
+1 cleaning,AI_Benefit_Breadth disagrees with its TRUE/FALSE flags,0,none found

@@ -1,0 +1,38 @@
+feature,source_column,kind
+years_professional_coding_num,years_professional_coding_num,numeric (scaled)
+AI_Trust_Score,AI_Trust_Score,numeric (scaled)
+ai_complex_task_concern,ai_complex_task_concern,numeric (scaled)
+AI_Job_Integration_Comfort,AI_Job_Integration_Comfort,numeric (scaled)
+AI_Tool_Count,AI_Tool_Count,numeric (scaled)
+AI_Benefit_Breadth,AI_Benefit_Breadth,numeric (scaled)
+ben_greater_efficiency,ben_greater_efficiency,0/1 flag
+ben_improve_accuracy_in_coding,ben_improve_accuracy_in_coding,0/1 flag
+ben_improve_collaboration,ben_improve_collaboration,0/1 flag
+ben_increase_productivity,ben_increase_productivity,0/1 flag
+ben_make_workload_more_manageable,ben_make_workload_more_manageable,0/1 flag
+ben_other,ben_other,0/1 flag
+ben_speed_up_learning,ben_speed_up_learning,0/1 flag
+tool_committing_and_reviewing_code,tool_committing_and_reviewing_code,0/1 flag
+tool_debugging_and_getting_help,tool_debugging_and_getting_help,0/1 flag
+tool_deployment_and_monitoring,tool_deployment_and_monitoring,0/1 flag
+tool_documenting_code,tool_documenting_code,0/1 flag
+tool_generating_content_or_synthetic_data,tool_generating_content_or_synthetic_data,0/1 flag
+tool_learning_about_a_codebase,tool_learning_about_a_codebase,0/1 flag
+tool_other,tool_other,0/1 flag
+tool_predictive_analytics,tool_predictive_analytics,0/1 flag
+tool_project_planning,tool_project_planning,0/1 flag
+tool_search_for_answers,tool_search_for_answers,0/1 flag
+tool_testing_code,tool_testing_code,0/1 flag
+tool_writing_code,tool_writing_code,0/1 flag
+country_Brazil,country,one-hot
+country_Canada,country,one-hot
+country_France,country,one-hot
+country_Germany,country,one-hot
+country_India,country,one-hot
+country_Netherlands,country,one-hot
+country_Other,country,one-hot
+country_Poland,country,one-hot
+country_Ukraine,country,one-hot
+country_United Kingdom of Great Britain and Northern Ireland,country,one-hot
+country_United States of America,country,one-hot
+country_Unknown,country,one-hot
