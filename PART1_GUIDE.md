@@ -30,7 +30,7 @@ Written for a beginner. Read top to bottom once, then use sections 5-7 when you 
 
 ## 2. What I changed in your project
 
-Your v1 pipeline was already well built (the split-before-fill order, the recode, the reflections). The one structural mistake was the `KEEP = [...]` list that hard-coded 8 predictors and threw the other columns away. Now:
+Your v1 pipeline was already built (the split-before-fill order, the recode, the reflections). The one structural mistake was the `KEEP = [...]` list that hard-coded 8 predictors and threw the other columns away. Now:
 
 | | v1 | v2 (now) |
 |---|---|---|
