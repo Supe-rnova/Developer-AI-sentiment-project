@@ -1,0 +1,29 @@
+feature,importance
+AI_Trust_Score,0.22956947142790105
+ai_complex_task_concern,0.08251536283297901
+ben_increase_productivity,0.061420797571848484
+tool_search_for_answers,0.041825638366070075
+tool_debugging_and_getting_help,0.04013880250451326
+ben_improve_accuracy_in_coding,0.03896653778106577
+tool_documenting_code,0.036749780462855895
+tool_generating_content_or_synthetic_data,0.0361344982999686
+tool_learning_about_a_codebase,0.03576833325214314
+ben_speed_up_learning,0.035347155853803464
+tool_testing_code,0.03309937705104348
+ben_make_workload_more_manageable,0.032313415633169744
+ben_greater_efficiency,0.03223596911898305
+country_Other,0.031216213939784788
+tool_writing_code,0.02922243996943024
+country_United States of America,0.02529450158485283
+tool_committing_and_reviewing_code,0.024884053180674444
+tool_project_planning,0.024194170733663263
+country_Germany,0.018607337305645177
+ben_improve_collaboration,0.016659066352277388
+country_India,0.015061977093024665
+country_Ukraine,0.01436997634602752
+country_United Kingdom of Great Britain and Northern Ireland,0.013657526741043435
+country_Canada,0.011111608729341334
+country_Poland,0.01089111186338579
+country_France,0.010779752402402086
+country_Brazil,0.009621804319663821
+country_Netherlands,0.008343319282438004
