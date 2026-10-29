@@ -167,3 +167,34 @@ Files: `03_modeling_forest.py`,
 `figures/05_random_forest_pred_vs_actual.png`,
 `figures/05_random_forest_residuals.png`,
 `figures/05_random_forest_feature_importance.png`.
+
+---
+
+## Modeling stage (ordinal regression)
+
+### 10. Why try ordinal regression
+**What it is:** a model built for targets that are ordered categories. AI_Sentiment_Score only takes 5 values (0, 25, 50, 75, 100) in a fixed order. Linear regression treats it as a smooth number, so it can predict impossible values (it went above 100 for 0.65% of test rows, max 109). Ordinal regression (ordered logit, statsmodels `OrderedModel`) gives one score per person and uses 4 cut-points to split people into the 5 levels, so it predicts the chance of each level and can never leave the 0-100 range. It was listed as a next step on the limitations slide.
+
+### 11. Same setup as the other two models
+**Decision:** identical 28 features (29 selected minus `country_Unknown`), the same train/test rows and the same 5 CV folds (shuffle, random_state=42). Test set opened once.
+
+**How it is scored:** two ways. *Expected score* (each level weighted by its probability) gives R2 / RMSE / MAE that compare directly with linear regression and the forest. *Most likely level* gives exact-level accuracy. Linear regression predictions were rounded to the nearest level for a fair accuracy comparison.
+
+### 12. Result: essentially tied with linear regression, slightly ahead
+| Stage | Model | R2 | RMSE | MAE | Exact level |
+|---|---|---|---|---|---|
+| 5-fold CV (train) | Ordinal regression | 0.344 | 17.25 | 13.56 | 55.8% |
+| Test (once) | Ordinal regression | 0.332 | 17.41 | 13.58 | 55.1% |
+| Test (once) | Linear regression | 0.328 | 17.46 | 13.61 | 55.1% |
+| Test (once) | Random forest | 0.234 | 18.64 | 14.36 | - |
+| Test (once) | Baseline (mean / always 75) | 0.000 | 21.30 | 14.63 | 50.1% |
+
+**What this tells us:** the model built for ordered levels scores the same as linear regression within a very small margin, never predicts outside 0-100, and finds the same drivers. Odds ratios (how much the odds of a HIGHER level multiply): increase productivity 2.4x, trust (per SD) 1.9x, greater efficiency 1.7x, writing code 1.7x. Not significant: improve collaboration, committing/reviewing code, search for answers, France, and improve accuracy in coding. So the linear regression conclusions hold.
+
+**Shared weakness:** it predicts 75 for most people and never predicts 0 (see the confusion matrix). The target is dominated by 75 and 100, so no model here separates the small unhappy group well.
+
+Files: `03_modeling_ordinal.py`,
+`data/processed/06_ordinal_regression_coefficients.csv`,
+`data/processed/06_ordinal_regression_metrics.csv`,
+`data/processed/06_ordinal_regression_cutpoints.csv`,
+`figures/06_ordinal_regression_confusion_matrix.png`.
